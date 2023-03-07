@@ -1,5 +1,5 @@
 ARG REPO=https://github.com/ElementsProject/lightning.git
-ARG VERSION=v22.11.1
+ARG VERSION=v23.02
 ARG USER=lightning
 ARG DATA=/data
 
@@ -74,7 +74,7 @@ ARG DATA
 LABEL maintainer="nolim1t (hello@nolim1t.co)"
 
 RUN apt-get update && apt-get install -y --no-install-recommends git socat inotify-tools python3 python3-pip cargo \
-    libpq-dev libsodium-dev nodejs npm \
+    libpq-dev libsodium-dev nodejs npm iproute2 iputils-ping \
     && rm -rf /var/lib/apt/lists/*
 
 
