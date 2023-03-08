@@ -48,6 +48,7 @@ RUN apt-get update && \
     python3-setuptools \
     python3-dev
 RUN pip3 install mrkd wheel mistune==0.8.4
+RUN pip3 install pyln-client
 
 ARG DEVELOPER=0
 
