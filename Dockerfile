@@ -3,7 +3,7 @@ ARG VERSION=v23.02
 ARG USER=lightning
 ARG DATA=/data
 
-FROM debian:buster-slim as downloader
+FROM debian:bullseye-slim as downloader
 
 ARG REPO
 ARG VERSION
@@ -33,7 +33,7 @@ RUN ./fetch-bitcoin.sh
 #    && tar -xzvf litecoin.tar.gz $BD/litecoin-cli --strip-components=1 --exclude=*-qt \
 #    && rm litecoin.tar.gz
 
-FROM debian:buster-slim as builder
+FROM debian:bullseye-slim as builder
 
 ARG VERSION
 ARG REPO
