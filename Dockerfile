@@ -75,7 +75,9 @@ ARG DATA
 LABEL maintainer="nolim1t (hello@nolim1t.co)"
 
 RUN apt-get update && apt-get install -y --no-install-recommends git socat inotify-tools python3 python3-pip cargo \
-    libpq-dev libsodium-dev nodejs npm iproute2 iputils-ping \
+    libpq-dev libsodium-dev nodejs npm \
+    iproute2 iputils-ping \
+    build-essential pkg-config libev-dev libcurl4-gnutls-dev libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 
