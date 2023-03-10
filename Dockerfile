@@ -33,7 +33,7 @@ RUN ./fetch-bitcoin.sh
 #    && tar -xzvf litecoin.tar.gz $BD/litecoin-cli --strip-components=1 --exclude=*-qt \
 #    && rm litecoin.tar.gz
 
-FROM debian:bullseye-slim as builder
+FROM debian:buster-slim as builder
 
 ARG VERSION
 ARG REPO
