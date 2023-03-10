@@ -79,6 +79,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends git socat inoti
     iproute2 iputils-ping \
     build-essential pkg-config libev-dev libcurl4-gnutls-dev libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
+RUN pip3 install --upgrade pip
 
 
 COPY --from=builder /lib /lib
